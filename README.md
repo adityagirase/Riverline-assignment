@@ -91,9 +91,4 @@ This project implements a scalable **Next-Best-Action (NBA)** engine to assist a
 > These are simulated predictions based on learned patterns from conversation history and support effectiveness.
 
 ---
----
 
-## ✍️ Author
-
-**Aditya**, July 2025  
-_Contact for clarification or code access: [Your Email]_
