@@ -12,7 +12,7 @@ This project implements a scalable **Next-Best-Action (NBA)** engine to assist a
 ├── main.ipynb              # Main logic: ingestion, user behavior, NBA engine
 ├── main_demo.ipynb         # Cleaned version for demo and evaluation
 ├── nba_results.csv         # Final NBA recommendations for 1000 customers
-├── results.csv             # CSV file of kaggle sample dataset
+├── results.csv             # Result file of kaggle sample dataset
 ├── sample.csv              # Additional sample predictions or test data
 ├── README.md               # You're reading it!
 ```
