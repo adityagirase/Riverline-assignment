@@ -12,30 +12,10 @@ This project implements a scalable **Next-Best-Action (NBA)** engine to assist a
 ├── main.ipynb              # Main logic: ingestion, user behavior, NBA engine
 ├── main_demo.ipynb         # Cleaned version for demo and evaluation
 ├── nba_results.csv         # Final NBA recommendations for 1000 customers
-├── results.csv             # CSV in exact Riverline format
+├── results.csv             # CSV file of kaggle sample dataset
 ├── sample.csv              # Additional sample predictions or test data
 ├── README.md               # You're reading it!
 ```
-
----
-
-## 📊 Datasets Used
-
-1. **Customer Support on Twitter (CST)**  
-   Multi-turn customer support conversations with brands on Twitter. Used to derive:
-   - Conversation flows
-   - User intent
-   - Resolution tagging  
-   [Link to dataset](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter)
-
-2. **(Optional) Reddit MBTI**  
-   Enriches customer personas and behavior modeling via personality traits.  
-   [Link to dataset](https://www.kaggle.com/datasets/minhaozhang1/reddit-mbti-dataset)
-
-3. **Other sources referenced** (optional enrichment only):
-   - Sentiment140 (for sentiment calibration)
-   - EmpatheticDialogues (for conversational patterns)
-   - PAN Author Profiling (for behavior cohorting)
 
 ---
 
@@ -69,17 +49,6 @@ This project implements a scalable **Next-Best-Action (NBA)** engine to assist a
 
 > **Approach Used**: A hybrid rule-based + lightweight classifier approach. Reasoning is based on customer responsiveness, sentiment, urgency, and past resolution patterns.
 
-Example:
-```json
-{
-  "customer_id": "123456",
-  "channel": "email_reply",
-  "send_time": "2025-07-03T16:00:00Z",
-  "message": "Hi! Just checking if you're still facing the login issue. Let us know!",
-  "reasoning": "Customer did not respond to previous prompt but has a history of replying via email during afternoon hours."
-}
-```
-
 ### 4. 📈 Evaluation
 
 - Run end-to-end pipeline on 1000 users.
@@ -88,46 +57,11 @@ Example:
   - Remaining open threads handled by NBA engine
 - Generates:
   - `nba_results.csv`: All 1000 customer instructions
-  - `results.csv`: Final result in [this exact format](https://docs.google.com/spreadsheets/d/1sTNMSkDJGibIA38MnaRFLDQ79NfPAXfOApymxZ-rP4E)
+  - `results.csv`: Final result of kaggle sample dataset
 
-Each row includes:
-- `customer_id`
-- `channel`
-- `send_time`
-- `message`
-- `reasoning`
-- `chat_log`:
-  ```
-  Customer: I can't log in  
-  Support: Try 'forgot password'  
-  Customer: It didn't work  
-  ```
-- `issue_status`: One of `resolved`, `pending_customer_reply`, `escalated`
 
 ---
 
-## 🧪 How to Run
-
-### 1. Install dependencies
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
-```
-
-### 2. Launch Jupyter Notebook
-```bash
-jupyter notebook main.ipynb
-```
-
-### 3. Generate Outputs
-- Run all cells in `main.ipynb` to:
-  - Build the data pipeline
-  - Observe behavior
-  - Predict NBA actions
-- Output files:
-  - `nba_results.csv`
-  - `results.csv`
-
----
 
 ## 🧾 Design Choices & Assumptions
 
@@ -157,13 +91,6 @@ jupyter notebook main.ipynb
 > These are simulated predictions based on learned patterns from conversation history and support effectiveness.
 
 ---
-
-## 📚 External References
-
-- [Kaggle CST Dataset](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter)
-- [Riverline Assignment Brief](https://docs.google.com/spreadsheets/d/1sTNMSkDJGibIA38MnaRFLDQ79NfPAXfOApymxZ-rP4E)
-- PAN, Sentiment140, EmpatheticDialogues for enrichment
-
 ---
 
 ## ✍️ Author
