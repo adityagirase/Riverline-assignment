@@ -79,16 +79,4 @@ This project implements a scalable **Next-Best-Action (NBA)** engine to assist a
 
 ---
 
-## 📈 Metrics Used
-
-| Metric                         | Value |
-|-------------------------------|-------|
-| Total Issues Processed        | 1000  |
-| Issues Already Resolved       | 312   |
-| Issues Needing NBA Prediction | 688   |
-| Predicted Resolved Post-NBA   | 539   |
-
-> These are simulated predictions based on learned patterns from conversation history and support effectiveness.
-
----
 
